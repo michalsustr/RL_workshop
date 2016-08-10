@@ -1,5 +1,5 @@
-ML_workshop
-===========
+Machine learning workshop
+=========================
 
 Materials and organization for the upcoming ML workshop.
 
