@@ -4,6 +4,8 @@ Machine learning workshop
 Materials and organization for the upcoming ML workshop.
 
 Sign up form is here: https://goo.gl/forms/WjooHybP8dEwiGX93
+(now is disabled, until more info is available)
+
 Thanks!
 
 If you would like to come to help us out, don't hesitate to contact us :)
@@ -20,8 +22,8 @@ Organizers
 
 Michal Šustr (MS)
 
-- [http://michal.sustr.sk/](homepage) 
-- [https://twitter.com/michal_sustr](twitter)
+- [homepage](http://michal.sustr.sk/) 
+- [twitter](https://twitter.com/michal_sustr)
 
 <!--
 TODO_honza: fotka?
