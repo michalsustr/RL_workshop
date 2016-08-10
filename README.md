@@ -31,7 +31,7 @@ TODO_honza: fotka?
 
 Ján Zikeš (JZ)
     
-- [https://about.me/zikesjan](about me)
+- [about me](https://about.me/zikesjan)
 
 Date
 ----
