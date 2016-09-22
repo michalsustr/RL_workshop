@@ -11,6 +11,11 @@ Thanks!
 
 Official website (for now it redirects here to github): http://lectures.ai
 
+## Why reinfocement learning?
+
+> Reinforcement learning is hot! You may have noticed that computers can now automatically learn to play ATARI games (from raw game pixels!), they are beating world champions at Go, simulated quadrupeds are learning to run and leap, and robots are learning how to perform complex manipulation tasks that defy explicit programming. It turns out that all of these advances fall under the umbrella of RL research.
+> https://karpathy.github.io/2016/05/31/rl/
+
 ## Date & place
 
 October 8th 2016, FIT ČVUT, room 350
