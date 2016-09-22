@@ -1,7 +1,6 @@
-Machine learning workshop
-=========================
+# Reinforcement learning workshop
 
-Materials and organization for the upcoming ML workshop.
+Materials and organization for the upcoming RL workshop.
 
 Sign up form is here: https://goo.gl/forms/WjooHybP8dEwiGX93
 (now is disabled, until more info is available)
@@ -10,21 +9,14 @@ Thanks!
 
 If you would like to come to help us out, don't hesitate to contact us :)
 
-<!-- 
-Official web-site: http://lectures.ai 
-TODO: finish
--->
+Official website (for now it redirects here): http://lectures.ai
 
-Date
-----
+## Date
 
-October 8-9
+October 8
 
-Program
-=======
+## Program
 
-Day 1: Saturday
----------------
 Main organizer: MS, assisting: JZ
 
 Saturday workshop is all about reinforcement learning (RL).
@@ -64,46 +56,16 @@ We will go through necessary theory and basics in the morning. In the afternoon 
 | *16:30 - 17:00* | *Coffee break*
 | 17:00 - 20:00   | Competition coding
 | 20:00 - 21:00   | Finalizing the day
-| 20:00 - 09:00   | Running models all night long until next workshop
+| 20:00 - 09:00   | Running models all night long
 
+### Competition
+Details about the competition are to be be specified.
 
-Day 2: Sunday
--------------
-Main organizer: JZ, assisting: MS
+## Place
 
-Sunday workshop is all about image captioning?
+FIT OI, room 350
 
-Since there will not be so much time for the training, we should provide some snapshots. 
-
-<!--
-TODO_honza: it's up to you :)
--->
-
-| Time            | Activity               |
-|-----------------|------------------------|
-| 9:00 - 10:30    | ?
-| 10:30 - 12:00   | ?
-| *12:00 - 13:00* | *Lunch break* 
-| 13:00 - 16:30   | ?
-| *16:30 - 17:00* | *Coffee break*
-| 17:00 - 20:00   | ?
-| 20:00 - 21:00   | Finalizing the day, Day 1 competition results
-
-
-Place
-=====
-
-We are looking for a good classroom, ideally with GPU machines and good wifi. Possible candidates?
-
-- [ ] FEL OI
-- [ ] FIT OI
-
-<!--
-TODO_michal: find place
--->
-
-Participant necessary prerequisites
-===================================
+## Necessary prerequisites for participants
 
 For the workshop to run effectively, participants should:
 
@@ -112,10 +74,9 @@ For the workshop to run effectively, participants should:
 
 It is a plus if you had taken a course in Optimization/Biologically inspired algorithms/Planning
   
-If you don't know python, please learn it - there's a lot materials available online. 
+If you don't know python, please learn some basics - there's a lot materials available online and it is quite a simple language.
 
-Organizers
-==========
+## Organizers
 
 ![Michal Šustr](pics/michal.sustr.png)
 
@@ -131,10 +92,9 @@ Ján Zikeš (JZ)
 - [about me](https://about.me/zikesjan)
 
 
-Main sponsor
-=============
+## Sponsor
 
-We'd like to thank our main sponsor, Blindspot solutions, for providing us pizzas and prizes.   
+We'd like to thank our sponsor, Blindspot solutions, for providing us pizzas and prizes.
 
 [![Michal Šustr](pics/blindspot.png)](http://blindspot-solutions.com/)
 
@@ -156,12 +116,4 @@ Reach here to help do some PR:
 
 TODO_michal: do PR
 
-Recording
----------
-
-If there is time left.
-
-- [ ] AVC (Silicon Hill)
-
-TODO_michal: ask AVC
 -->
