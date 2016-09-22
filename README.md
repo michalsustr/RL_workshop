@@ -1,5 +1,7 @@
 # Reinforcement learning workshop
 
+![Atari](pics/atari.jpg)
+
 Materials and organization for the upcoming RL workshop.
 
 Sign up form is here: https://goo.gl/forms/WjooHybP8dEwiGX93
@@ -21,7 +23,9 @@ Main organizer: MS, assisting: JZ
 
 Saturday workshop is all about reinforcement learning (RL).
  
-There will be competition amongst the participants to create the best algorithm for a given task, with a small award :-) 
+There will be competition amongst the participants to create the best algorithm for a given task, with a small award :-)
+
+![Trophy](pics/trophy.jpg)
 
 ### What is reinforcement learning?
 
@@ -75,7 +79,7 @@ For the workshop to run effectively, participants should:
 - be proficient at programing in Python
 - have taken courses on probability & statistics, linear algebra and mathematical analysis
 
-It is a plus if you had taken a course in Optimization/Biologically inspired algorithms/Planning
+It is a plus if you had taken a courwse in Optimization/Biologically inspired algorithms/Planning
   
 If you don't know python, please learn some basics - there's a lot materials available online and it is quite a simple language.
 
