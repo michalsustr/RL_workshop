@@ -25,13 +25,15 @@ There will be competition amongst the participants to create the best algorithm 
 
 ### What is reinforcement learning?
 
-Reinforcement learning is an area of machine learning inspired by behaviorist psychology, concerned with how software agents ought to take actions in an environment so as to maximize some notion of cumulative reward. 
+Reinforcement learning is an area of machine learning inspired by behaviorist psychology, concerned with how software agents ought to take actions in an environment to maximize some notion of a cumulative reward.
 
-In machine learning, the environment is typically formulated as a Markov decision process (MDP) as many reinforcement learning algorithms for this context utilize dynamic programming techniques.
+Usually the agent doesn't have any knowledge about the environment and through exploration and exploitation of his knowledge he finds policy to take the most cumulatively rewarding actions.
+
+In machine learning, the environment is typically modeled as a Markov decision process (MDP) as many reinforcement learning algorithms utilize dynamic programming techniques.
  
-Q-learning is a model-free reinforcement learning technique. Specifically, Q-learning can be used to find an optimal action-selection policy for any given (finite) Markov decision process (MDP)
+Q-learning is a model-free reinforcement learning technique. Q-learning can be used to find an optimal action-selection policy for any given (finite) Markov decision process (MDP)
 
-A recent application of Q-learning to deep learning, by Google DeepMind, titled "deep reinforcement learning" or "deep Q-networks", has been successful at playing some Atari 2600 games at expert human levels.
+A recent application of Q-learning to deep learning, by Google DeepMind, titled "deep reinforcement learning" or "deep Q-networks", has been successful at playing some Atari 2600 games at expert human levels. They are games such as [Space Invaders](https://www.youtube.com/watch?v=437Ld_rKM2s), [Pong](https://www.youtube.com/watch?v=moqeZusEMcA), [Breakout](https://www.youtube.com/watch?v=QIs3UOTdsJM) and others.
 
 Take a look at this two-minute-paper which nicely summarizes recent publications:
 
@@ -39,8 +41,9 @@ Take a look at this two-minute-paper which nicely summarizes recent publications
 " target="_blank"><img src="http://img.youtube.com/vi/Ih8EfvOzBOY/0.jpg" 
 alt="two-minute-paper RL video" width="240" height="180" border="10" /></a>
 
-Deep reinforcement learning has very interesting real-world applications. In July, 2016, [DeepMind announced](https://deepmind.com/blog) they reduced google data center electricity cooling bill by 40%, which is a huge saving on costs and the environment.
+Deep reinforcement learning has very interesting real-world applications besides game playing. In July, 2016, [DeepMind announced](https://deepmind.com/blog) they reduced google data center electricity cooling bill by 40%, which is a huge saving on costs and the environment.
 
+You can look forward to learn about basics of RL, recent papers and get hand-on experience with RL by training algorithms on GPUs.
 
 ### Workshop details
 We will go through necessary theory and basics in the morning. In the afternoon we will focus on solving problems from OpenAI Gym and train RL models on GPUs.
