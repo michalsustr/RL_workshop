@@ -5,17 +5,15 @@
 Materials and organization for the upcoming RL workshop.
 
 Sign up form is here: https://goo.gl/forms/WjooHybP8dEwiGX93
-(now is disabled, until more info is available)
-
-Thanks!
 
 If you would like to come to help us out, don't hesitate to contact us :)
+Thanks!
 
-Official website (for now it redirects here): http://lectures.ai
+Official website (for now it redirects here to github): http://lectures.ai
 
-## Date
+## Date & place
 
-October 8
+October 8th 2016, FIT ČVUT, room 350
 
 ## Program
 
@@ -31,19 +29,19 @@ There will be competition amongst the participants to create the best algorithm 
 
 Reinforcement learning is an area of machine learning inspired by behaviorist psychology, concerned with how software agents ought to take actions in an environment to maximize some notion of a cumulative reward.
 
-Usually the agent doesn't have any knowledge about the environment and through exploration and exploitation of his knowledge he finds policy to take the most cumulatively rewarding actions.
+Take a look at this two-minute-paper which nicely summarizes recent publications:
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Ih8EfvOzBOY
+" target="_blank"><img src="http://img.youtube.com/vi/Ih8EfvOzBOY/0.jpg"
+alt="two-minute-paper RL video" width="240" height="180" border="10" /></a>
+
+Usually the agent doesn't have any prior knowledge about the environment and through exploration of the environment and exploitation of his knowledge about it he finds a policy to take the most cumulatively rewarding actions.
 
 In machine learning, the environment is typically modeled as a Markov decision process (MDP) as many reinforcement learning algorithms utilize dynamic programming techniques.
  
 Q-learning is a model-free reinforcement learning technique. Q-learning can be used to find an optimal action-selection policy for any given (finite) Markov decision process (MDP)
 
 A recent application of Q-learning to deep learning, by Google DeepMind, titled "deep reinforcement learning" or "deep Q-networks", has been successful at playing some Atari 2600 games at expert human levels. They are games such as [Space Invaders](https://www.youtube.com/watch?v=437Ld_rKM2s), [Pong](https://www.youtube.com/watch?v=moqeZusEMcA), [Breakout](https://www.youtube.com/watch?v=QIs3UOTdsJM) and others.
-
-Take a look at this two-minute-paper which nicely summarizes recent publications:
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=Ih8EfvOzBOY
-" target="_blank"><img src="http://img.youtube.com/vi/Ih8EfvOzBOY/0.jpg" 
-alt="two-minute-paper RL video" width="240" height="180" border="10" /></a>
 
 Deep reinforcement learning has very interesting real-world applications besides game playing. In July, 2016, [DeepMind announced](https://deepmind.com/blog) they reduced google data center electricity cooling bill by 40%, which is a huge saving on costs and the environment.
 
@@ -67,10 +65,6 @@ We will go through necessary theory and basics in the morning. In the afternoon 
 
 ### Competition
 Details about the competition are to be be specified.
-
-## Place
-
-FIT OI, room 350
 
 ## Necessary prerequisites for participants
 
@@ -105,22 +99,3 @@ We'd like to thank our sponsor, Blindspot solutions, for providing us pizzas and
 
 [![Michal Šustr](pics/blindspot.png)](http://blindspot-solutions.com/)
 
-
-<!--
-Organizational details
-======================
-
-PR
---
-
-Reach here to help do some PR:
-
-- [ ] MLMU
-- [ ] FEL OI
-- [ ] FIT OI
-- [ ] Meetup.com
-- [ ] Eventbrite
-
-TODO_michal: do PR
-
--->
