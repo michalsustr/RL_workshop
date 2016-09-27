@@ -71,6 +71,12 @@ We will go through necessary theory and basics in the morning. In the afternoon 
 ### Competition
 Details about the competition are to be be specified.
 
+## Sponsor
+
+We'd like to thank our sponsor, Blindspot solutions, for providing us pizzas and prizes.
+
+[![Michal Šustr](pics/blindspot.png)](http://blindspot-solutions.com/)
+
 ## Necessary prerequisites for participants
 
 For the workshop to run effectively, participants should:
@@ -97,10 +103,4 @@ Ján Zikeš (JZ)
     
 - [about me](https://about.me/zikesjan)
 
-
-## Sponsor
-
-We'd like to thank our sponsor, Blindspot solutions, for providing us pizzas and prizes.
-
-[![Michal Šustr](pics/blindspot.png)](http://blindspot-solutions.com/)
 
