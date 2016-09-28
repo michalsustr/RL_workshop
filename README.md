@@ -103,4 +103,9 @@ Ján Zikeš (JZ)
     
 - [about me](https://about.me/zikesjan)
 
+Co-organizers:
+
+- https://www.fit.cvut.cz/
+- http://datalab.fit.cvut.cz/
+
 
