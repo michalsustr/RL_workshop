@@ -108,4 +108,17 @@ Co-organizers:
 - https://www.fit.cvut.cz/
 - http://datalab.fit.cvut.cz/
 
+## Citation
+
+If you are going to use the materials in this workshop and publish papers, please include citation:
+
+	@ONLINE{RL_workshop:2016:Online,
+		author = {Michal Sustr and Jan Zikes},
+		title = {Reinforcement learning workshop},
+		month = october,
+		year = {2016},
+		url = {http://lectures.ai/rl_workshop}
+	}
+
+
 
