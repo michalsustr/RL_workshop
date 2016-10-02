@@ -6,6 +6,8 @@ O workshop je veľký záujem, prihlásilo sa zatiaľ dokopy 40 ľudí.
 Ak by si si to rozmyslel s účasťou, tak nám daj prosím čím skôr vedieť
 aby sme napísali náhradníkom.
 
+Workshop bude po slovensky/česky, s anglickými materiálmi.
+
 # Príprava
 
 Miestnosť je vybavená strojmi s GPU (Geforce 480 nebo 560),
