@@ -167,6 +167,8 @@ dobry zdroj?
 - https://www.microsoft.com/en-us/research/careers/
 - https://research.facebook.com/ai/
 - http://www.xrce.xerox.com/About-XRCE/Internships
+- Gitter: https://gitter.im/openai/
+- Twitter: https://twitter.com/michal_sustr
 
 #### Literature
 - Reinforcement Learning: An Introduction [Sutton,Barto] https://webdocs.cs.ualberta.ca/~sutton/book/the-book.html
