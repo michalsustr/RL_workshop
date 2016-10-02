@@ -97,6 +97,12 @@ On your personal laptop, please make sure to:
 - install [OpenAI Gym](https://gym.openai.com/docs)
 
 		pip install gym
+		# note: I had to update gym source files, to swap if/elif conditions
+		# for ffmpeg/avconv. I issued PR to the gym but I'm not sure if they
+		# will update it. If this fails for you as well, you can update the code
+		# or clone my repo at https://github.com/michalsustr/gym
+		# Diff:
+		# https://github.com/openai/gym/compare/master...michalsustr:master#diff-54b89e317dc6e7d9dfd407344cafd1bf
 
 - optionally: [Set up TensorFlow on AWS GPU](https://github.com/gtoubassi/dqn-atari/wiki/Setting-up-TensorFlow-on-AWS-GPU)
 
