@@ -94,6 +94,12 @@ On your personal laptop, please make sure to:
 			sudo make install
 			sudo pip install .
 
+- install [OpenAI Gym](https://gym.openai.com/docs)
+
+		git clone https://github.com/openai/gym
+		cd gym
+		pip install -e . # minimal install
+
 - optionally: [Set up TensorFlow on AWS GPU](https://github.com/gtoubassi/dqn-atari/wiki/Setting-up-TensorFlow-on-AWS-GPU)
 
 # Test setup
