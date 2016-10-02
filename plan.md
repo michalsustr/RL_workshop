@@ -56,6 +56,7 @@ tématu - reinforcement learning, který se odehrá 8. 10. v budově FITu ČVUT.
 
 ### Introduction (10m)
 - Who we are, what have we done in the past, why we are doing this
+- Mention participants profiles
 
 ### Tensorflow (50m)
 
