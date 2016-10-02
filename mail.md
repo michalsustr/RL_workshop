@@ -1,5 +1,5 @@
 Ahoj {name},
-
+{noname_text}
 teší nás že sa zúčastňuješ [RL workshopu](http://lectures.ai).
 
 O workshop je veľký záujem, prihlásilo sa zatiaľ dokopy 40 ľudí.
