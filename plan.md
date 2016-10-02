@@ -124,6 +124,7 @@ tématu - reinforcement learning, který se odehrá 8. 10. v budově FITu ČVUT.
 	- twitter
 	- reddit
 	- newsletters
+- Obligatory feedback (pull request on github with their feedbacks)
 
 --------------------------------------------------------------------------------
                                 More details

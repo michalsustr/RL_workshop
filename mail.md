@@ -20,7 +20,7 @@ odkázali, že sú príliš zaneprázdnení aby nám mohli pomôcť.
 **Preto by som chcel poprosiť aby si si pre každý prípad doniesol
 svoj vlastný notebook a spojazdnil nasledovný softvér:**
 
-- https://github.com/michalsustr/ML_workshop/blob/master/preparation/
+- https://github.com/michalsustr/ML_workshop/tree/master/preparation
 
 O tom či všetko funguje tak ako má ešte budeme informovať.
 
