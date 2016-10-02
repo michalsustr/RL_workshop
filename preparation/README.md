@@ -96,7 +96,7 @@ On your personal laptop, please make sure to:
 
 - install [OpenAI Gym](https://gym.openai.com/docs)
 
-		pip install gym[all]
+		pip install gym
 
 - optionally: [Set up TensorFlow on AWS GPU](https://github.com/gtoubassi/dqn-atari/wiki/Setting-up-TensorFlow-on-AWS-GPU)
 
@@ -108,3 +108,22 @@ On your personal laptop, please make sure to:
 - Test tensorflow (can take a while to run for the first time)
 
 		$ python tf_example.py
+
+- Test gym - get your API key in the [https://gym.openai.com/](gym) (by signing in with github account)
+  and update the `gym_example.py` file.
+
+		$ python gym_example.py
+
+	You should get a reference link to your evalution board
+
+		2016-10-02 21:18:26,920 [MainThread  ][INFO ]:
+		****************************************************
+		You successfully uploaded your evaluation on CartPole-v0 to
+		OpenAI Gym! You can find it at:
+
+			https://gym.openai.com/evaluations/eval_8ZzrWOlRICX3ynLBTQ8A
+
+		****************************************************
+
+	Please send this link to my e-mail address `michal.sustr at you know gmail.com` with title
+	`[RL_workshop] gym link` so that we know how many people actually read this and prepared themselves :-)
