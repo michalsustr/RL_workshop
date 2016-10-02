@@ -1,8 +1,10 @@
 Ahoj {name},
 {noname_text}
-teší nás že sa zúčastňuješ [RL workshopu](http://lectures.ai).
+teší nás že sa zúčastňuješ RL workshopu - http://lectures.ai/rl_workshop
 
-O workshop je veľký záujem, prihlásilo sa zatiaľ dokopy 40 ľudí.
+O workshop je veľký záujem, prihlásilo sa zatiaľ dokopy 40 ľudí,
+čo je skoro dvojnásobná kapacita miestnosti.
+
 Ak by si si to rozmyslel s účasťou, tak nám daj prosím čím skôr vedieť
 aby sme napísali náhradníkom.
 
@@ -18,7 +20,7 @@ odkázali, že sú príliš zaneprázdnení aby nám mohli pomôcť.
 **Preto by som chcel poprosiť aby si si pre každý prípad doniesol
 svoj vlastný notebook a spojazdnil nasledovný softvér:**
 
-- https://github.com/michalsustr/ML_workshop/blob/master/preparation.md
+- https://github.com/michalsustr/ML_workshop/blob/master/preparation/
 
 O tom či všetko funguje tak ako má ešte budeme informovať.
 
