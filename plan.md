@@ -150,7 +150,8 @@ Linky na repa:
 - https://github.com/Jabberwockyll/deep_rl_ale
 - https://github.com/gtoubassi/dqn-atari
 	- napisat o snapshoty: https://github.com/gtoubassi
-
+	- vysledky: https://docs.google.com/spreadsheets/d/1RZM2qhKQaXaud4S2ILsRVukmiPCjM-xtJTuPRpb96HY/edit#gid=2001383367
+	- 
 - vyskusat si atari play z githubu
 - vyskusat veci z gymu
 
@@ -158,6 +159,7 @@ Linky na repa:
 dobry zdroj?
 - https://www.nervanasys.com/demystifying-deep-reinforcement-learning/
 - https://github.com/asrivat1/DeepLearningVideoGames
+- https://github.com/dennybritz/reinforcement-learning
 
 
 #### What next
