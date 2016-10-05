@@ -4,7 +4,13 @@
 
 Materials and organization for the upcoming RL workshop.
 
-Sign up form is here: https://goo.gl/forms/WjooHybP8dEwiGX93
+**UPDATE**
+
+Workshop has been postponed until November because of organizer's workload. Participants have been notified by e-mail. We will specify a new date later. Thanks for understanding.
+
+Sign up form is now closed. 
+
+<!-- https://goo.gl/forms/WjooHybP8dEwiGX93 -->
 
 If you would like to come to help us out, don't hesitate to contact us :)
 Thanks!
