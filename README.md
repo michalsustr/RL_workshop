@@ -24,7 +24,7 @@ Official website (for now it redirects here to github): http://lectures.ai
 
 ## Date & place
 
-October 8th 2016, FIT ČVUT, room 350
+November 12th 2016 (yet to be confirmed), FIT ČVUT, room 350
 
 ## Program
 
