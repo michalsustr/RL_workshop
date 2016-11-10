@@ -61,7 +61,6 @@ We will go through necessary theory and basics in the morning. In the afternoon 
 
 ### Timetable (subject to change):
 
-|-----------------|-------|-----------------------------------------|-------|
 | Time            | Delta | Activity                                | Who   |
 |-----------------|-------|-----------------------------------------|-------|
 | 8:30 - 08:40    |  10m  | Workshop introduction                   | MS,JZ |
@@ -94,7 +93,6 @@ We will go through necessary theory and basics in the morning. In the afternoon 
 |-----------------|-------|-----------------------------------------|-------|
 | midnight on     |  8d   | Running models until deadline           |       |
 | Sunday 27th     |       | Submit results.                         |       |
-|-----------------|-------|-----------------------------------------|-------|
 
 ### Competition
 Details about the competition are to be be specified.
