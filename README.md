@@ -18,7 +18,7 @@ Official website (for now it redirects here to github): http://lectures.ai
 
 ## Date & place
 
-October 8th 2016, FIT ČVUT, room 350
+November 19th 2016, FIT ČVUT, room 350
 
 ## Program
 
@@ -88,7 +88,7 @@ It is a plus if you had taken a courwse in Optimization/Biologically inspired al
   
 If you don't know python, please learn some basics - there's a lot materials available online and it is quite a simple language.
 
-## Organizers
+## Main organizer
 
 ![Michal Šustr](pics/michal.sustr.png)
 
@@ -96,6 +96,8 @@ Michal Šustr (MS)
 
 - [homepage](http://michal.sustr.sk/) 
 - [twitter](https://twitter.com/michal_sustr)
+
+### Lecturer
 
 ![Jan Zikeš](pics/jan.zikes.png)
 
@@ -110,7 +112,7 @@ Co-organizers:
 
 ## Citation
 
-If you are going to use the materials in this workshop and publish papers, please include citation:
+If you are going to use the materials in this workshop, please include citation:
 
 	@ONLINE{RL_workshop:2016:Online,
 		author = {Michal Sustr and Jan Zikes},
