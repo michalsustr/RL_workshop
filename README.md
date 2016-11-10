@@ -6,9 +6,7 @@ Materials and organization for the upcoming RL workshop.
 
 **UPDATE**
 
-Workshop has been postponed until November because of organizer's workload. Participants have been notified by e-mail. We will specify a new date later. Thanks for understanding.
-
-Sign up form is now closed. 
+Sign up form is now closed.
 
 <!-- https://goo.gl/forms/WjooHybP8dEwiGX93 -->
 
@@ -24,7 +22,7 @@ Official website (for now it redirects here to github): http://lectures.ai
 
 ## Date & place
 
-November 12th 2016 (yet to be confirmed), FIT ČVUT, room 350
+November 19th 2016, FIT ČVUT, room 350
 
 ## Program
 
@@ -61,18 +59,42 @@ You can look forward to learn about basics of RL, recent papers and get hand-on 
 ### Workshop details
 We will go through necessary theory and basics in the morning. In the afternoon we will focus on solving problems from OpenAI Gym and train RL models on GPUs.
 
-### Timetable:
+### Timetable (subject to change):
 
-| Time            | Activity               |
-|-----------------|------------------------|
-| 9:00 - 10:30    | Basics with TensorFlow 
-| 10:30 - 12:00   | Theory for RL
-| *12:00 - 13:00* | *Lunch break* 
-| 13:00 - 16:30   | Tutorials
-| *16:30 - 17:00* | *Coffee break*
-| 17:00 - 20:00   | Competition coding
-| 20:00 - 21:00   | Finalizing the day
-| 20:00 - 09:00   | Running models all night long
+|-----------------|-------|-----------------------------------------|-------|
+| Time            | Delta | Activity                                | Who   |
+|-----------------|-------|-----------------------------------------|-------|
+| 8:30 - 08:40    |  10m  | Workshop introduction                   | MS,JZ |
+| 8:40 - 09:30    |  50m  | Basics with TensorFlow                  | JZ    |
+| 9:30 - 10:00    |  30m  | Basics from game theory                 | MS    |
+|                 |       | - minimax                               |       |
+|                 |       | - alfa-beta pruning                     |       |
+|                 |       | - Samuel checkers                       |       |
+|                 |       | - MCTS, intro to bandits                |       |
+|                 |       | - UCT (MCTS)                            |       |
+|                 |       | - Markov chains, MDPs                   |       |
+| *10:00 - 10:30* |  30m  | *Coffee break*                          |       |
+| 10:30 - 11:00   |  30m  | Theory for convnets                     | JZ    |
+| 11:00 - 12:00   |  1h   | Theory for RL                           | MS    |
+|                 |       | - Temporal-difference learning          |       |
+|                 |       | - Q-learning                            |       |
+|                 |       | - DQN                                   |       |
+| *12:00 - 13:00* |  1h   | *Lunch break*                           |       |
+| 13:00 - 14:30   |  1.5h | Case studies                            | MS    |
+|                 |       | - TD-Gammon                             |       |
+|                 |       | - Atari games                           |       |
+|                 |       | - Go playing                            |       |
+|                 |       | - How it's at Google                    | JC?   |
+| 14:30 - 16:30   |  2h   | Tutorials                               | MS    |
+|                 |       | - Atari games                           |       |
+|                 |       | - Gym environment                       |       |
+| *16:30 - 17:00* |  30m  | *Coffee break*                          |       |
+| 17:00 - 19:30   |  2.5h | Free session coding                     | MS,JZ |
+| 19:30 - 20:00   |  30m  | Finalizing the day                      | MS,JZ |
+|-----------------|-------|-----------------------------------------|-------|
+| midnight on     |  8d   | Running models until deadline           |       |
+| Sunday 27th     |       | Submit results.                         |       |
+|-----------------|-------|-----------------------------------------|-------|
 
 ### Competition
 Details about the competition are to be be specified.
@@ -94,7 +116,7 @@ It is a plus if you had taken a courwse in Optimization/Biologically inspired al
   
 If you don't know python, please learn some basics - there's a lot materials available online and it is quite a simple language.
 
-## Organizers
+## Main organizer
 
 ![Michal Šustr](pics/michal.sustr.png)
 
@@ -103,13 +125,15 @@ Michal Šustr (MS)
 - [homepage](http://michal.sustr.sk/) 
 - [twitter](https://twitter.com/michal_sustr)
 
+### Lecturer
+
 ![Jan Zikeš](pics/jan.zikes.png)
 
 Ján Zikeš (JZ)
     
 - [about me](https://about.me/zikesjan)
 
-Co-organizers:
+### Co-organizers:
 
 - https://www.fit.cvut.cz/
 - http://datalab.fit.cvut.cz/
