@@ -1,0 +1,6 @@
+.DS_Store
+.env/
+logs/
+summaries/
+models/
+*.pyc
