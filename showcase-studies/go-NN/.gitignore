@@ -1,0 +1,12 @@
+*.pyc
+*.sgf
+*.tar.bz2
+*.npz
+*.swp
+*.bin
+data/
+play/
+work/
+cgos/
+kgsGtp/
+
