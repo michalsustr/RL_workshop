@@ -43,13 +43,13 @@ class RecordStats:
                     [self.spg_summ, self.q_summ, self.gp_summ, self.l_summ,
                      self.max_summ, self.min_summ, self.time_summ])
                 self.path = (
-                '../records/' + args.game + '/' + args.agent_type + '/' + args.agent_name + '/train')
+                args.save_path + '/records/' + args.game + '/' + args.agent_type + '/' + args.agent_name + '/train')
             else:
                 self.summary_op = tf.merge_summary(
                     [self.spg_summ, self.q_summ, self.gp_summ, self.max_summ,
                      self.min_summ, self.time_summ])
                 self.path = (
-                '../records/' + args.game + '/' + args.agent_type + '/' + args.agent_name + '/test')
+                args.save_path + '/records/' + args.game + '/' + args.agent_type + '/' + args.agent_name + '/test')
 
             # self.summary_op = tf.merge_all_summaries()
             self.sess = tf.Session()

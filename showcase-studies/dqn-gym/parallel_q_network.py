@@ -13,7 +13,7 @@ class ParallelQNetwork():
         self.discount_factor = args.discount_factor
         self.target_update_frequency = args.target_update_frequency
         self.total_updates = 0
-        self.path = '../saved_models/' + args.game + '/' + args.agent_type + '/' + args.agent_name
+        self.path = args.save_path + '/saved_models/' + args.game + '/' + args.agent_type + '/' + args.agent_name
         if not os.path.exists(self.path):
             os.makedirs(self.path)
         self.name = args.agent_name
@@ -137,7 +137,7 @@ class ParallelQNetwork():
             self.sess.run(tf.initialize_all_variables())
             logging.info("Network Initialized")
             self.summary_writer = tf.train.SummaryWriter(
-                '../records/' + args.game + '/' + args.agent_type + '/' + args.agent_name + '/params',
+                args.save_path + '/records/' + args.game + '/' + args.agent_type + '/' + args.agent_name + '/params',
                 self.sess.graph)
 
     def conv_relu(self, cpu_input, gpu_input, target_input, kernel_shape,
