@@ -1,0 +1,4 @@
+*.pyc
+out-*
+training-progression
+__pycache__
