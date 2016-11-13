@@ -116,8 +116,6 @@ class AtariEmulator:
         img = ndimage.zoom(img, (0.4, 0.525))
         return img
 
-    # return cv2.resize(img, self.screen_dims, interpolation=cv2.INTER_LINEAR)
-
     def isTerminal(self):
         return (self.isGameOver() or (self.lives > self.ale.lives()))
 

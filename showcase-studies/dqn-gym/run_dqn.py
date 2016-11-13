@@ -5,7 +5,8 @@ import argparse
 import asyncio
 import time
 
-from atari_emulator import AtariEmulator
+from environment import AtariEnvironment
+from environment import GymEnvironment
 from experience_memory import ExperienceMemory
 from periodic import Periodic
 from q_network import QNetwork
@@ -21,7 +22,7 @@ logging_colorer.init_logging()
 async def main():
     parser = argparse.ArgumentParser(
         'a program to train or run a deep q-learning agent')
-    parser.add_argument("game", type=str, help="name of game to play")
+    parser.add_argument("game", type=str, help="name of game to play (either ROM file name or Gym environment id, such as Breakout-v0")
     parser.add_argument("agent_type", type=str,
                         help="name of learning/acting technique used")
     parser.add_argument("agent_name", type=str,
@@ -29,6 +30,9 @@ async def main():
     parser.add_argument("--rom_path", type=str,
                         help="path to directory containing atari game roms",
                         default='../atari-roms')
+    parser.add_argument("--environment", type=str,
+                        choices=["ale", "gym"], default="ale",
+                        help="Whether to train agent using ALE or OpenAI Gym.")
     parser.add_argument("--watch",
                         help="if true, a pretrained model with the specified name is loaded and tested with the game screen displayed",
                         action='store_true')
@@ -141,6 +145,9 @@ async def main():
     parser.add_argument("--debug_script",
                         help="path to debugging script that is going to be executed",
                         default="debug_script.py")
+    parser.add_argument("--save_path",
+                        help="path where models and records should be saved",
+                        default="./training_results/")
     args = parser.parse_args()
 
     if args.network_architecture == 'deepmind_nature':
@@ -177,8 +184,8 @@ async def main():
             logging.info("Running training")
             train_stats = RecordStats(args, False)
             test_stats = RecordStats(args, True)
-            training_emulator = AtariEmulator(args)
-            testing_emulator = AtariEmulator(args)
+            training_emulator = create_emulator(args)
+            testing_emulator = create_emulator(args)
             num_actions = len(training_emulator.get_possible_actions())
             experience_memory = ExperienceMemory(args, num_actions)
 
@@ -201,7 +208,7 @@ async def main():
 
         else:
             logging.info("Running evaluation")
-            testing_emulator = AtariEmulator(args)
+            testing_emulator = create_emulator(args)
             num_actions = len(testing_emulator.get_possible_actions())
             q_network = QNetwork(args, num_actions)
             agent = DQNAgent(args, q_network, None, None, num_actions, None)
@@ -216,6 +223,12 @@ async def main():
 def run_debug(**kwargs):
     logging.info("from debug!")
     print("print from debug!")
+
+def create_emulator(args):
+    if args.environment == "ale":
+        return AtariEnvironment(args)
+    else:
+        return GymEnvironment(args)
 
 
 # print(i)

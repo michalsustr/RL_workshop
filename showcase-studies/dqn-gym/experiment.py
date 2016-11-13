@@ -45,10 +45,11 @@ def evaluate_agent(args, agent, test_emulator, test_stats):
 
 
 def run_experiment(args, agent, test_emulator, test_stats):
+    logging.info("Running random exploration")
     agent.run_random_exploration()
 
     for epoch in range(1, args.epochs + 1):
-
+        logging.info("Running epoch %d" % epoch)
         if epoch == 1:
             agent.run_epoch(args.epoch_length - agent.random_exploration_length,
                             epoch)
