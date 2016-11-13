@@ -1,8 +1,9 @@
 import time
-import sys
 import os
 import logging
+
 import logging_colorer
+
 logging_colorer.init_logging()
 
 DEBUG_SCRIPT = "debug_script.py"
@@ -13,8 +14,10 @@ except FileNotFoundError:
     logging.error("No debug file")
     last_time = 0
 
+
 def i_have_it_all(**kwargs):
     print(i)
+
 
 for i in range(int(1e10)):
     try:
@@ -22,7 +25,7 @@ for i in range(int(1e10)):
             last_time = time.time()
 
             with open(DEBUG_SCRIPT, 'r') as f:
-                script=f.read()
+                script = f.read()
                 logging.info("Running debug file")
                 exec(script)
 
@@ -35,4 +38,3 @@ for i in range(int(1e10)):
     print("%d" % i, end="\r")
 
     i_have_it_all(**locals())
-
