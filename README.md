@@ -129,7 +129,8 @@ Michal Šustr (MS)
 
 Ján Zikeš (JZ)
     
-- [about me](https://about.me/zikesjan)
+- [twitter](https://twitter.com/ziky90)
+- [github](https://github.com/ziky90)
 
 ### Co-organizers:
 
