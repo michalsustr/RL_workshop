@@ -154,6 +154,7 @@ class AtariEnvironment(Environment):
 
 class GymEnvironment(Environment):
     def __init__(self, args):
+        raise NotImplementedError("not supported yet, sorry. Will change soon!")
         ''' Initialize Atari environment '''
         import gym
         self.gym = gym.make(args.game)
