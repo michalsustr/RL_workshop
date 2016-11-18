@@ -63,17 +63,17 @@ We will go through necessary theory and basics in the morning. In the afternoon 
 
 | Time            | Delta | Activity                                | Who   |
 |-----------------|-------|-----------------------------------------|-------|
-| 8:30 - 08:40    |  10m  | Workshop introduction                   | MS,JZ |
-| 8:40 - 09:30    |  50m  | Basics with TensorFlow                  | JZ    |
-| 9:30 - 10:00    |  30m  | Basics from game theory                 | MS    |
+| 08:30 - 08:40   |  10m  | Workshop introduction                   | MS,JZ |
+| 08:40 - 09:10   |  30m  | Theory for convnets                     | JZ    |
+| 09:10 - 10:00   |  50m  | Basics with TensorFlow                  | JZ    |
+| *10:00 - 10:30* |  30m  | *Coffee break*                          |       |
+| 10:30 - 11:00   |  30m  | Basics from game theory                 | MS    |
 |                 |       | - minimax                               |       |
 |                 |       | - alfa-beta pruning                     |       |
 |                 |       | - Samuel checkers                       |       |
 |                 |       | - MCTS, intro to bandits                |       |
 |                 |       | - UCT (MCTS)                            |       |
 |                 |       | - Markov chains, MDPs                   |       |
-| *10:00 - 10:30* |  30m  | *Coffee break*                          |       |
-| 10:30 - 11:00   |  30m  | Theory for convnets                     | JZ    |
 | 11:00 - 12:00   |  1h   | Theory for RL                           | MS    |
 |                 |       | - Temporal-difference learning          |       |
 |                 |       | - Q-learning                            |       |
@@ -83,7 +83,6 @@ We will go through necessary theory and basics in the morning. In the afternoon 
 |                 |       | - TD-Gammon                             |       |
 |                 |       | - Atari games                           |       |
 |                 |       | - Go playing                            |       |
-|                 |       | - How it's at Google                    | JC?   |
 | 14:30 - 16:30   |  2h   | Tutorials                               | MS    |
 |                 |       | - Atari games                           |       |
 |                 |       | - Gym environment                       |       |
