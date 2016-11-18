@@ -2,13 +2,11 @@ import logging
 import os
 import sys
 import argparse
-import asyncio
 import time
 
 from environment import AtariEnvironment
 from environment import GymEnvironment
 from experience_memory import ExperienceMemory
-from periodic import Periodic
 from q_network import QNetwork
 from dqn_agent import DQNAgent
 from record_stats import RecordStats
@@ -19,7 +17,7 @@ import logging_colorer
 
 logging_colorer.init_logging()
 
-async def main():
+def main():
     parser = argparse.ArgumentParser(
         'a program to train or run a deep q-learning agent')
     parser.add_argument("game", type=str, help="name of game to play (either ROM file name or Gym environment id, such as Breakout-v0")
@@ -169,60 +167,39 @@ async def main():
             [1, 2, 2, 1]]
         args.dense_layer_shapes = [[2592, 256]]
 
-    try:
-        debug_last_time = os.path.getmtime(args.debug_script)
-    except FileNotFoundError:
-        debug_last_time = -1
-        logging.error("No debug file")
+    if not args.watch:
+        logging.info("Running training")
+        train_stats = RecordStats(args, False)
+        test_stats = RecordStats(args, True)
+        training_emulator = create_emulator(args)
+        testing_emulator = create_emulator(args)
+        num_actions = len(training_emulator.get_possible_actions())
+        experience_memory = ExperienceMemory(args, num_actions)
 
-    periodic_debug = Periodic(run_debug(), 1)
-    i = 100
-    try:
-        await periodic_debug.start()
-
-        if not args.watch:
-            logging.info("Running training")
-            train_stats = RecordStats(args, False)
-            test_stats = RecordStats(args, True)
-            training_emulator = create_emulator(args)
-            testing_emulator = create_emulator(args)
-            num_actions = len(training_emulator.get_possible_actions())
-            experience_memory = ExperienceMemory(args, num_actions)
-
-            q_network = None
-            agent = None
-            if args.parallel:
-                logging.info("Using parallel implementation")
-                q_network = ParallelQNetwork(args, num_actions)
-                agent = ParallelDQNAgent(args, q_network, training_emulator,
-                                         experience_memory, num_actions,
-                                         train_stats)
-            else:
-                logging.info("Using single thread implementation")
-                q_network = QNetwork(args, num_actions)
-                agent = DQNAgent(args, q_network, training_emulator,
-                                 experience_memory, num_actions, train_stats)
-
-            periodic_debug.locals = locals()
-            experiment.run_experiment(args, agent, testing_emulator, test_stats)
-
+        q_network = None
+        agent = None
+        if args.parallel:
+            logging.info("Using parallel implementation")
+            q_network = ParallelQNetwork(args, num_actions)
+            agent = ParallelDQNAgent(args, q_network, training_emulator,
+                                     experience_memory, num_actions,
+                                     train_stats)
         else:
-            logging.info("Running evaluation")
-            testing_emulator = create_emulator(args)
-            num_actions = len(testing_emulator.get_possible_actions())
+            logging.info("Using single thread implementation")
             q_network = QNetwork(args, num_actions)
-            agent = DQNAgent(args, q_network, None, None, num_actions, None)
+            agent = DQNAgent(args, q_network, training_emulator,
+                             experience_memory, num_actions, train_stats)
 
-            periodic_debug.locals = locals()
-            experiment.evaluate_agent(args, agent, testing_emulator, None)
+        experiment.run_experiment(args, agent, testing_emulator, test_stats)
 
-    finally:
-        await periodic_debug.stop()
+    else:
+        logging.info("Running evaluation")
+        testing_emulator = create_emulator(args)
+        num_actions = len(testing_emulator.get_possible_actions())
+        q_network = QNetwork(args, num_actions)
+        agent = DQNAgent(args, q_network, None, None, num_actions, None)
 
-
-def run_debug(**kwargs):
-    logging.info("from debug!")
-    print("print from debug!")
+        experiment.evaluate_agent(args, agent, testing_emulator, None)
 
 def create_emulator(args):
     if args.environment == "ale":
@@ -230,23 +207,5 @@ def create_emulator(args):
     else:
         return GymEnvironment(args)
 
-
-# print(i)
-# try:
-# 	if os.path.getmtime(args.debug_script) >= debug_last_time:
-# 		debug_last_time = time.time()
-#
-# 		with open(args.debug_script, 'r') as f:
-# 			script=f.read()
-# 			logging.info("Running debug file")
-# 			exec(script)
-#
-# except SyntaxError as e:
-# 	logging.error("Badly written script!")
-# 	print(e)
-# except FileNotFoundError:
-# 	logging.error("No debug file")
-
 if __name__ == "__main__":
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(main())
+    main()
