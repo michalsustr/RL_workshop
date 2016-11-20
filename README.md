@@ -126,7 +126,7 @@ Michal Šustr (MS)
 
 ![Jan Zikeš](pics/jan.zikes.png)
 
-Ján Zikeš (JZ)
+Jan Zikeš (JZ)
     
 - [twitter](https://twitter.com/ziky90)
 - [github](https://github.com/ziky90)
