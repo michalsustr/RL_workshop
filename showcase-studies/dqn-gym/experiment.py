@@ -1,12 +1,13 @@
 import logging
+from tqdm import tqdm
 
 from visuals import Visuals
 
 
 def evaluate_agent(args, agent, test_emulator, test_stats):
+    logging.info("Evaluating agent performace in test emulator")
     step = 0
-    games = 0
-    reward = 0.0
+    total_reward = 0.0
     reset = test_emulator.reset()
     agent.test_state = list(next(zip(*reset)))
     screen = test_emulator.preprocess()
@@ -14,16 +15,16 @@ def evaluate_agent(args, agent, test_emulator, test_stats):
     if args.watch:
         visuals = Visuals(test_emulator.get_possible_actions())
 
-    while (step < args.test_steps) and (games < args.test_episodes):
-        while not test_emulator.isGameOver() and step < args.test_steps_hardcap:
+    # either play as many steps as possible or as many games
+    for _ in tqdm(range(args.test_games), unit="game"):
+        while not test_emulator.isGameOver() and step < args.test_steps:
             action, q_values = agent.test_step(screen)
-            results = test_emulator.run_step(action)
-            screen = results[0]
-            reward += results[4]
+            screen, action, reward, terminal, raw_reward = test_emulator.run_step(action)
+            total_reward += raw_reward
 
             # record stats
             if not (test_stats is None):
-                test_stats.add_reward(results[4])
+                test_stats.add_reward(raw_reward)
                 if not (q_values is None):
                     test_stats.add_q_values(q_values)
                 # endif
@@ -35,36 +36,9 @@ def evaluate_agent(args, agent, test_emulator, test_stats):
 
             step += 1
         # endwhile
-        games += 1
         if not (test_stats is None):
             test_stats.add_game()
         reset = test_emulator.reset()
         agent.test_state = list(next(zip(*reset)))
 
-    return reward / games
-
-
-def run_experiment(args, agent, test_emulator, test_stats):
-    logging.info("Running random exploration")
-    agent.run_random_exploration()
-
-    for epoch in range(1, args.epochs + 1):
-        logging.info("Running epoch %d" % epoch)
-        if epoch == 1:
-            agent.run_epoch(args.epoch_length - agent.random_exploration_length,
-                            epoch)
-        else:
-            agent.run_epoch(args.epoch_length, epoch)
-
-        results = evaluate_agent(args, agent, test_emulator, test_stats)
-        logging.info("Score for epoch {0}: {1}".format(epoch, results))
-        steps = 0
-        if args.parallel:
-            steps = agent.random_exploration_length + (
-            agent.train_steps * args.training_frequency)
-        else:
-            steps = agent.total_steps
-
-        test_stats.record(steps)
-        if results >= args.saving_threshold:
-            agent.save_model(epoch)
+    return total_reward / args.test_games

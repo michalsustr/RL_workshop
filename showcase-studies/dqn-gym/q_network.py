@@ -317,10 +317,10 @@ class QNetwork():
 
         return loss
 
-    def save_model(self, epoch):
-
+    def save_model(self, step):
+        # todo: save all checkpoints
         self.saver.save(self.sess, self.path + '/' + self.name + '.ckpt',
-                        global_step=epoch)
+                        global_step=step)
 
     def build_rmsprop_optimizer(self, learning_rate, rmsprop_decay,
                                 rmsprop_constant, gradient_clip, version):

@@ -34,18 +34,14 @@ def main():
     parser.add_argument("--watch",
                         help="if true, a pretrained model with the specified name is loaded and tested with the game screen displayed",
                         action='store_true')
-
-    parser.add_argument("--epochs", type=int, help="number of epochs",
-                        default=200)
-    parser.add_argument("--epoch_length", type=int,
-                        help="number of steps in an epoch", default=250000)
+    parser.add_argument("--training_length", type=int,
+                        help="number of steps of simulator training (excluding random exploration length)", default=10000000)
+    parser.add_argument("--test_frequency", type=int,
+                        help="how often in steps perform testing during training", default=250000)
     parser.add_argument("--test_steps", type=int,
                         help="max number of steps per test", default=125000)
-    parser.add_argument("--test_steps_hardcap", type=int,
-                        help="absolute max number of steps per test",
-                        default=135000)
-    parser.add_argument("--test_episodes", type=int,
-                        help="max number of episodes per test", default=30)
+    parser.add_argument("--test_games", type=int,
+                        help="max number of games per test", default=30)
     parser.add_argument("--history_length", type=int,
                         help="number of frames in a state", default=4)
     parser.add_argument("--training_frequency", type=int,
@@ -171,8 +167,13 @@ def main():
         logging.info("Running training")
         train_stats = RecordStats(args, False)
         test_stats = RecordStats(args, True)
-        training_emulator = create_emulator(args)
-        testing_emulator = create_emulator(args)
+        # Create two emulators: training for the gym, and testing
+        # for the underlying ALE interface
+        # Testing is done separately so that we don't unnecessarily
+        # waste training time, thus worsen the performance of agent.
+        training_emulator = create_emulator("ale", args)
+        testing_emulator = create_emulator("ale", args)
+
         num_actions = len(training_emulator.get_possible_actions())
         experience_memory = ExperienceMemory(args, num_actions)
 
@@ -180,29 +181,36 @@ def main():
         agent = None
         if args.parallel:
             logging.info("Using parallel implementation")
+            raise NotImplementedError("sorry, not ready yet")
             q_network = ParallelQNetwork(args, num_actions)
-            agent = ParallelDQNAgent(args, q_network, training_emulator,
+            agent = ParallelDQNAgent(args, q_network,
+                                     training_emulator, testing_emulator,
                                      experience_memory, num_actions,
-                                     train_stats)
+                                     train_stats, test_stats)
         else:
             logging.info("Using single thread implementation")
             q_network = QNetwork(args, num_actions)
-            agent = DQNAgent(args, q_network, training_emulator,
-                             experience_memory, num_actions, train_stats)
+            agent = DQNAgent(args, q_network,
+                             training_emulator, testing_emulator,
+                             experience_memory, num_actions,
+                             train_stats, test_stats)
 
-        experiment.run_experiment(args, agent, testing_emulator, test_stats)
+        agent.run_experiment()
 
     else:
         logging.info("Running evaluation")
-        testing_emulator = create_emulator(args)
+        testing_emulator = create_emulator("ale", args)
         num_actions = len(testing_emulator.get_possible_actions())
         q_network = QNetwork(args, num_actions)
-        agent = DQNAgent(args, q_network, None, None, num_actions, None)
+        agent = DQNAgent(args, q_network,
+                         None, None,
+                         None, num_actions,
+                         None, None)
 
         experiment.evaluate_agent(args, agent, testing_emulator, None)
 
-def create_emulator(args):
-    if args.environment == "ale":
+def create_emulator(env, args):
+    if env == "ale":
         return AtariEnvironment(args)
     else:
         return GymEnvironment(args)
