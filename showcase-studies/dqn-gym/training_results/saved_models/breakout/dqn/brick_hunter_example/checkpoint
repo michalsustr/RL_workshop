@@ -1,0 +1,2 @@
+model_checkpoint_path: "brick_hunter_qsub.ckpt-24"
+all_model_checkpoint_paths: "brick_hunter_qsub.ckpt-24"
