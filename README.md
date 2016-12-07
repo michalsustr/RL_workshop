@@ -2,18 +2,20 @@
 
 ![Atari](pics/atari.jpg)
 
-Materials and organization for the upcoming RL workshop.
+Materials and organization for the RL workshop.
 
-**UPDATE**
+This workshop is part of series of lectures / workshops listed at http://lectures.ai
 
-Sign up form is now closed.
+**UPDATE** 7/12/2016
 
-<!-- https://goo.gl/forms/WjooHybP8dEwiGX93 -->
+Workshop is now over.
 
-If you would like to come to help us out, don't hesitate to contact us :)
-Thanks!
+Thanks to all the participants!
 
-Official website (for now it redirects here to github): http://lectures.ai
+The winner of the competition is Khanh Chuong Le (aka Milan) and he received a price (5TB external hard drive).
+
+The winning solution:
+https://gym.openai.com/evaluations/eval_LYKxica8TwyO4z79y6xOQ
 
 ## Why reinfocement learning?
 
